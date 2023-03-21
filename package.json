@@ -1,0 +1,41 @@
+{
+  "name": "how-the-web-work",
+  "version": "1.0.0",
+  "author": "hoangnguyen <nvanhoang188@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --files -r tsconfig-paths/register src/server.ts",
+    "build": "rm -rf dist && tsc && tsc-alias",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "yarn lint --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "yarn lint:fix"
+    ]
+  },
+  "dependencies": {
+    "express": "4.18.2",
+    "pug": "3.0.2"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.1.1",
+    "@types/express": "4.17.17",
+    "@typescript-eslint/eslint-plugin": "5.54.1",
+    "@typescript-eslint/parser": "5.54.1",
+    "cross-env": "7.0.3",
+    "eslint": "8.35.0",
+    "eslint-config-prettier": "8.7.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.2",
+    "prettier": "2.8.4",
+    "prettier-eslint": "15.0.1",
+    "ts-node-dev": "2.0.0",
+    "tsc-alias": "1.8.2",
+    "tsconfig-paths": "4.1.2",
+    "typescript": "4.9.5"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@hn/*": ["./src/*"]
+    },
+    "skipLibCheck": true,
+    "strict": true
+  }
+}
